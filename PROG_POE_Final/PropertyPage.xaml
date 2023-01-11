@@ -1,0 +1,39 @@
+﻿<Page x:Class="PROG_POE_Final.PropertyPage"
+   xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PROG_POE_Final"
+        xmlns:emoji="clr-namespace:Emoji.Wpf;assembly=Emoji.Wpf"
+        xmlns:System="clr-namespace:System;assembly=mscorlib"     
+       xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"  
+        
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        Background="{DynamicResource MaterialDesignPaper}"
+        TextElement.FontWeight="Medium"
+        TextElement.FontSize="14"
+        FontFamily="{materialDesign:MaterialDesignFont}"
+        mc:Ignorable="d"
+      Loaded="Page_Loaded"
+       Height="523" Width="738">
+    <Grid VerticalAlignment="Stretch">
+        <StackPanel Margin="-66,1,66,-1"  HorizontalAlignment="Stretch">
+           
+            <Canvas>
+                <Label Style="{DynamicResource MaterialDesignLabel}" Content="Choose between: " 
+                       FontSize="15" 
+                       Width="132" Height="30" Canvas.Left="372" Canvas.Top="46"/>
+                <materialDesign:Card Height="143" Width="600" Canvas.Left="128" Canvas.Top="225">
+                    <TextBlock  TextAlignment="Center" FontFamily="Roboto" FontSize="25" 
+                                     Text= "{Binding Source={x:Static System:DateTime.Now}, StringFormat= Current Property Costs For {0:MMMM yyyy:}}" 
+                               Margin="10,10,0,93"/>
+                </materialDesign:Card>
+                <emoji:TextBlock Name="currentPropertyTxtb" FontSize="25" Canvas.Left="278" Canvas.Top="273" Height="50" Width="300" TextAlignment="Center" Text="🤷‍♂️">
+                </emoji:TextBlock>
+                <Button Name="rentBtn" Click="rentBtn_Click" Style="{DynamicResource MaterialDesignRaisedButton}" Canvas.Left="384" Canvas.Top="93" Width="108" Height="36" Content="Rent"></Button>
+                <Button Name ="homeLoanBtn" Click="homeLoanBtn_Click" Style="{DynamicResource MaterialDesignRaisedButton}" Canvas.Left="384" Canvas.Top="150" Width="108" Height="36" Content="Home Loan"></Button>
+
+            </Canvas>
+        </StackPanel>
+    </Grid>
+</Page>

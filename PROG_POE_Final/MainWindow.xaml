@@ -1,0 +1,44 @@
+﻿<Window x:Class="PROG_POE_Final.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PROG_POE_Final"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:emoji="clr-namespace:Emoji.Wpf;assembly=Emoji.Wpf"
+        xmlns:System="clr-namespace:System;assembly=mscorlib"       
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        Background="{DynamicResource MaterialDesignPaper}"
+        TextElement.FontWeight="Medium"
+        TextElement.FontSize="14"
+        FontFamily="{materialDesign:MaterialDesignFont}"
+        mc:Ignorable="d"
+        ResizeMode="CanMinimize"
+        Loaded="Window_Loaded"
+        Height="370" Width="568">
+
+    <Grid VerticalAlignment="Center">
+        <StackPanel HorizontalAlignment="Left" Margin="311,76,0,-76" >
+            <Canvas>
+                <emoji:TextBlock Width="358" FontFamily="Roboto" FontSize="25" Text="Welcome to Mini-Budget 🚀🚀"
+                                 Canvas.Left="-204" Canvas.Top="-223"></emoji:TextBlock>
+                <Button x:Name="statsBtn" Click="statsBtn_Click" Style="{DynamicResource MaterialDesignRaisedButton}" Width="150" Content="Current Stats"
+                        Canvas.Left="-100" Canvas.Top="-200">
+                    <Button.Margin>
+                        <Thickness>0,55,0,353</Thickness>
+                    </Button.Margin>
+                </Button>
+                <Button x:Name="budgetBtn" Style="{DynamicResource MaterialDesignRaisedButton}" 
+                        Width="150" Content="New Budget" Click="budgetBtn_Click"
+                        Canvas.Left="-100" Canvas.Top="-170">
+                    <Button.Margin>
+                        <Thickness>0,90,0,353</Thickness>
+                    </Button.Margin>
+                </Button>
+                <emoji:TextBlock FontSize="12" TextAlignment="Center" Foreground="#DD959595" Text="Version 3.0a" Canvas.Left="-86" Opacity="1" Height="19" Width="122" Canvas.Top="30"/>
+                <emoji:TextBlock FontSize="12" TextAlignment="Center" Foreground="#DD959595" Text="Made with ❤ and ☕ by Siegan Govender" Canvas.Left="-161" Opacity="1" Height="19" Width="272" Canvas.Top="50"/>
+
+            </Canvas>
+        </StackPanel>
+    </Grid>
+</Window>
